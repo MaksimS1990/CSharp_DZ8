@@ -16,6 +16,8 @@ Console.WriteLine("введите количество столбцов");
 int columns = int.Parse(Console.ReadLine()!);
 Console.WriteLine();
 
+int [,] array = new int[rows, columns];
+
 CreateArray(rows, columns);
 WriteArray(array);
 
@@ -40,8 +42,6 @@ int[,] CreateArray(int rows, int columns)                               // фу�
 
 void SortingStringsInAnArray(int[,] array)                              // функция сортирует массив по убыванию в каждой строке
 {
-    int[,] array = new int[rows, columns];
-
     for (var i = 0; i < array.GetLength(0); i++)
     {
         for (var j = 0; j < array.GetLength(1); j++)
